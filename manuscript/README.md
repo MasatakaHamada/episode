@@ -49,3 +49,4 @@ https://github.com/MasatakaHamada/episode/tree/master/manuscript にアクセス
 ## 何だかよくわからないぞ？
 
 上の説明を見てもよくわからない、あるいはGitHubにあまり触れたくないという方は、原稿を正責任者まで直接送ってください。
+GitHubのアカウントを作らなくてもhttps://github.com/MasatakaHamada/episode からファイルをダウンロードできます。ダウンロード方法は上記4を参照してください。
