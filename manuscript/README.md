@@ -7,21 +7,21 @@ sample.texを基に各自作成した原稿はこのフォルダに入れてく�
 
 ## 準備
 
-1.GitHubアカウントを作る
+1. GitHubアカウントを作る
 
 https://github.com/ にアクセスして自分のアカウントを作ってください。
 
-2.「コラボレーター」になる
+2. 「コラボレーター」になる
 
 このレポジトリの編集権限をもらうために、正責任者に上で作ったアカウント名を教えてください。しばらくするとコラボレーターになるためのメールが届きます。
 
 ## 編集
 
-3.episodeのレポジトリにアクセスする
+3. episodeのレポジトリにアクセスする
 
 https://github.com/MasatakaHamada/episode にアクセスしてください。
 
-4.episodeのファイル一式をダウンロードする。
+4. episodeのファイル一式をダウンロードする。
 
 上記でアクセスしたページに緑色の「Clone or download」というボタンがあります。「Download ZIP」を選択し、ファイルをダウンロードしてください。
 
@@ -29,7 +29,7 @@ https://github.com/MasatakaHamada/episode にアクセスしてください。
 
 ダウンロードしたファイルの中にある 'sample.tex' を参考にしながら、自分の端末で自分の原稿をTeXで書いてください。
 
-6.自分の原稿をレポジトリに追加する
+6. 自分の原稿をレポジトリに追加する
 
 https://github.com/MasatakaHamada/episode/tree/master/manuscript にアクセスして「Create new file」というボタンをクリックしてください。すると、Web上に入力画面が表示されるので、自分の端末で書いたTeX原稿をコピペしてください。また、上部にある小さな空欄にファイル名（例 'nantoka.tex' ）を入力するのを忘れないでください。
 
@@ -42,7 +42,8 @@ https://github.com/MasatakaHamada/episode/tree/master/manuscript にアクセス
 
 数行程度の軽微な変更の場合は 'Commit directly to the master branch' を選択してください。
 
-7.自分の原稿をepisodeのレポジトリ上で操作する
+7. 自分の原稿をepisodeのレポジトリ上で操作する
+
 レポジトリに追加した原稿を編集する場合は、自分の原稿をGitHub上で開き、右側にある鉛筆マーク 'Edit this file' をクリックしてください。編集方法は上で既に説明した通りです。
 
 ## 何だかよくわからないぞ？
