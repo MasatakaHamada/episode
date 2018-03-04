@@ -1,0 +1,95 @@
+\documentclass[notombow,episode,openany,dvipdfmx]{kyouritu}
+\usepackage{graphicx,color}
+\usepackage{tikz}
+\usepackage{makeidx,multicol}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{standalone}
+\usepackage{tocloft}
+\usepackage{aliascnt}
+\usepackage{ascmac}
+\usepackage{subfiles}
+
+
+% standard.sty から移動：
+\usepackage{bm}
+\usepackage[top=25truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{setspace} % setspaceパッケージのインクルード\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{url}
+\usepackage{array,arydshln}
+
+\usepackage{hyperref}\usepackage{pxjahyper}
+%\usepackage{natbib} 
+%\usepackage{standard}
+%プリアンブル
+\topmargin -0.5in
+\headheight 0.2in
+\headsep 0.3in  
+\evensidemargin -0.03in
+\oddsidemargin -0.4in
+%\textwidth 5.6in
+%\textheight 8.4in\renewcommand{\thetable}{%
+%\arabic{table}}
+
+%圏点
+\makeatletter
+\def\kenten#1{%
+\ifvmode\leavevmode\else\hskip\kanjiskip\fi
+\setbox1=\hbox to \z@{・\hss}%
+\ht1=.63zw
+\@kenten#1\end}
+\def\@kenten#1{%
+\ifx#1\end \let\next=\relax \else
+\raise.63zw\copy1\nobreak #1\hskip\kanjiskip\relax
+\let\next=\@kenten
+\fi\next}
+\makeatother
+
+%Section等先頭を大文字にすると番号付けしない．
+\newcommand{\Chapter}[1]{\chapter*{{\Huge #1}}
+\markboth{#1}{#1}
+\addcontentsline{toc}{chapter}{#1}
+\stepcounter{chapter}}
+\newcommand{\Section}[1]{\section*{{\huge #1}}
+\addcontentsline{toc}{section}{#1}}
+\newcommand{\Subsection}[1]{\subsection*{\underline{#1}}}
+\newcommand{\Subsubsection}[1]{\subsubsection*{#1}}
+\setcounter{tocdepth}{0} %Chapterのみ表示する
+\renewcommand*{\sectionmark}[1]{}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand*{\KBsectionfont}[1]{\normalfont\bfs\huge #1}
+
+\usetikzlibrary{%
+  arrows.meta,%
+  %decorations.pathreplacing,%
+  decorations.markings,%
+  shapes.misc,%
+  patterns
+}
+
+
+%本文
+\begin{document}
+\frontmatter
+\input{maegaki}
+\clearpage % tocloft パッケージを使う場合は自分で \clearpage しないといけない
+\tableofcontents
+\mainmatter
+{\subfile{komabasaiyanagawa}}
+{\subfile{uchino}}
+{\subfile{germath}}
+{\subfile{yamaguchi}}
+{\subfile{okuda}}
+{\subfile{kobayashi}}
+{\subfile{ziphil}}
+{\subfile{masuda}}
+{\subfile{ookuwa}}
+% \cftaddtitleline{toc}{chapter}{圏論が分かる4コマ漫画(小林)}{章間}
+% このようにすると好きなように目次を変更できる
+\backmatter
+%\Chapter{編集後記}を入れても良い
+\input{atogaki}
+\end{document}
