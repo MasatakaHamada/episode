@@ -2,12 +2,12 @@
 
 % ここにnewtheorem,newenvironment,defなどを書く
 \theoremstyle{definition}
-\newtheorem{defi}{定義}[section]
-\newtheorem{ex}[defi]{例}
-\newtheorem{qst}[defi]{問題}
-\newtheorem{prop}[defi]{命題}
-\newtheorem{thm}[defi]{定理}
-\newtheorem{lem}[defi]{補題}
+\newtheorem{hamadadefi}{定義}[section]
+\newtheorem{hamadaex}[hamadadefi]{例}
+\newtheorem{hamadaqst}[hamadadefi]{問題}
+\newtheorem{hamadaprop}[hamadadefi]{命題}
+\newtheorem{hamadathm}[hamadadefi]{定理}
+\newtheorem{hamadalem}[hamadadefi]{補題}
 \renewcommand\proofname{\bf 証明}
 
 \begin{document} %ここから文章を始める
@@ -61,7 +61,7 @@
 \{x\mid xが満たす条件\},\ \{x,y,z\},\ \{a,b,c,\cdots\}
 \]
 
-\begin{ex}
+\begin{hamadaex}
 \label{shugo}
 $P=\{x\mid xは図鑑番号1から151までの炎タイプのポケモン\}$は集合である．
 一方，$Q=\{x\mid xはみんなが好きなポケモン\}$は集合とは言えない．
@@ -83,12 +83,12 @@ $P=\{x\mid xは図鑑番号1から151までの炎タイプのポケモン\}$は�
 \footnote{$\mathbb{N}$，$\mathbb{Z}$，$\mathbb{Q}$，$\mathbb{R}$，$\mathbb{C}$は黒板太字と呼ばれ，
 大学数学でよく使われます．大変便利な記号なので，この文章でも使うことにします．}
 が，$X=\{p\mid pは素数っぽい数\}$は集合とは言えない．
-\end{ex}
+\end{hamadaex}
 
-\begin{qst}
+\begin{hamadaqst}
 \label{shugoq}
 例\ref{shugo}に倣って，図形に関するもので「集合と言えるもの」・「集合と言えないもの」を挙げよ．
-\end{qst}
+\end{hamadaqst}
 
 $A$を集合とするとき，$A$を構成する一つ一つの「もの」を，
 集合$A$の元(あるいは要素)と呼びます．$a$が集合$A$の元であるとき，
@@ -102,28 +102,28 @@ $リザードン\in P$，$ピカチュウ\notin P$，$2018\in\mathbb{N}$，$-273
 $A$の元がすべて$B$に属し，かつ$B$の元がすべて$A$に属する
 とき，$A$と$B$は等しいと言い，$A=B$と書きます．
 
-\begin{ex}
+\begin{hamadaex}
 $\{x\in\mathbb{R}\mid x^2=1\}=\{\pm1\}$である．
 ただし，$\{x\in\mathbb{R}\mid x^2=1\}$は
 「実数$x$ (すなわち$x\in\mathbb{R}$)であって
 $x^2=1$を満たすもの全部の集合」を表している．
-\end{ex}
+\end{hamadaex}
 
 次に定義する言葉は，集合と集合の間の包含関係を表す概念です．
 
-\begin{defi}[部分集合]
+\begin{hamadadefi}[部分集合]
 集合$A,B$が「$x\in A$ならば$x\in B$」を満たすとき，
 $A$は$B$の部分集合であると言い，このことを$A\subset B$と書く．
 特に$A\subset B$かつ$A\neq B$が成り立つとき，
 $A$は$B$の真部分集合であると言い，このことを$A\subsetneq B$と書く．
-\end{defi}
+\end{hamadadefi}
 
-\begin{ex}
+\begin{hamadaex}
 $A=\{ミズゴロウ, ヌマクロー, ラグラージ\}$，
 $B=\{ミズゴロウ, ラグラージ\}$，$C=\{ヌマクロー\}$とすると，
 $B\subset A$，$C\subsetneq A$などが成り立つが，
 $C\subset B$は成り立たない．
-\end{ex}
+\end{hamadaex}
 
 部分集合の定義から「$A\subset B$かつ$B\subset A$ならば$A=B$」が成り立つことがわかります．
 したがって，$A=B$を証明するには$A\subset B$かつ$B\subset A$であることを示せば
@@ -131,10 +131,10 @@ $C\subset B$は成り立たない．
 
 ここで，大きさ比べの対象となる「無限個の元を持つ集合」を定義しておきましょう．
 
-\begin{defi}[有限集合・無限集合]
+\begin{hamadadefi}[有限集合・無限集合]
 集合$A$の元の個数が有限であるとき，$A$を有限集合と呼ぶ．
 有限集合でない集合を無限集合と呼ぶ．
-\end{defi}
+\end{hamadadefi}
 
 無限であるということを「有限でないこと」と定義しました．
 多くの数学の本もこのように定義していると思います．
@@ -145,7 +145,7 @@ $C\subset B$は成り立たない．
 大きさの比べようがありません．そこで，集合と集合の間の関係を定めるための
 概念として「写像」というものを定義しましょう．
 
-\begin{defi}[写像]
+\begin{hamadadefi}[写像]
 \label{map}
 $A,B$を集合とする．
 任意の$a\in A$に対し，ただ一つの元$b\in B$を対応させるものを，
@@ -153,9 +153,9 @@ $A$から$B$への写像と呼ぶ．
 $f$が$A$から$B$への写像であることを$f\colon A\to B$と書き，
 このとき$A$を定義域，$B$を値域と呼ぶ．
 また，$f$によって$a\in A$が対応する$b\in B$を$f(a)$と書く．
-\end{defi}
+\end{hamadadefi}
 
-\begin{ex}
+\begin{hamadaex}
 \label{mapex}
 $\mathbb{R}$から$\mathbb{R}$への写像$f$を次のように定める:
 \[
@@ -165,40 +165,40 @@ f\colon\mathbb{R}\to\mathbb{R},\ x\mapsto 2x+1
 という意味である．つまり，写像$f\colon\mathbb{R}\to\mathbb{R}$は一次関数に他ならない．
 関数とは，一般に$\mathbb{R}$や$\mathbb{C}$を値域に持つ写像のことを言う．
 一方，$x>0$に対し$g(x)=(xの平方根)$とすると，$g$は写像でない．
-\end{ex}
+\end{hamadaex}
 
-\begin{qst}
+\begin{hamadaqst}
 \label{mapq}
 集合$X=\{0,1,2,3\}$に対し，
 $\mathbb{N}$から$X$への写像を一つ挙げよ．
 また，例\ref{mapex}に倣って，写像でないものも一つ挙げよ．
-\end{qst}
+\end{hamadaqst}
 
 次の定義は何だか回りくどいですが，要するに
 「$f$が$A$の元と$B$の元を1対1に結び付ける」ということです．
 この言葉が無限の大きさ比べのキーワードになります．
 
-\begin{defi}[1対1対応]
+\begin{hamadadefi}[1対1対応]
 $f$を$A$から$B$への写像とする．
 任意の$b\in B$に対し$b=f(a)$を満たす$a\in A$がただ一つ存在するとき，
 $f$を$A$から$B$への1対1対応
 \footnote{一般には全単射(全射かつ単射の意)と呼ばれることが多いですが，わかりやすさを考えてこの表現を使いました．}
 と呼ぶ．
-\end{defi}
+\end{hamadadefi}
 
-\begin{qst}
+\begin{hamadaqst}
 \label{bijecq}
 例\ref{mapex}の写像$f$は$\mathbb{R}$から$\mathbb{R}$への1対1対応であることを示せ．
-\end{qst}
+\end{hamadaqst}
 
 \section{集合の大きさ比べ}
 さて，いよいよ無限の大きさを比べてみましょう．
 そこで，無限集合の「大きさ」にあたる濃度という概念を定義します．
 
-\begin{defi}[濃度]
+\begin{hamadadefi}[濃度]
 集合$A,B$に対し，$A$から$B$への1対1対応が存在するとき，
 $A$と$B$の濃度は等しいと言い，このことを$|A|=|B|$と書く．
-\end{defi}
+\end{hamadadefi}
 
 ここで注意しておきたいのは，濃度は「一つひとつの集合に対して定まるものではない」
 ということです．つまり，無限集合の大きさを，一つの集合の大きさを見るのではなく，
@@ -206,7 +206,7 @@ $A$と$B$の濃度は等しいと言い，このことを$|A|=|B|$と書く．
 「無限は数えられない」という問題をこのように回避するのは，
 なかなかうまいやり方だと思いませんか．
 
-\begin{ex}
+\begin{hamadaex}
 \label{NandZ}
 $\mathbb{N}$は$\mathbb{Z}$の真部分集合であるが，
 $|\mathbb{N}|=|\mathbb{Z}|$が成り立つ．
@@ -226,14 +226,14 @@ $n$&0&1&2&3&4&5&6&$\cdots$ \\\hline
 $f(n)$&0&1&$-1$&2&$-2$&3&$-3$&$\cdots$
 \end{tabular}
 \end{table}
-\end{ex}
+\end{hamadaex}
 
-\begin{qst}
+\begin{hamadaqst}
 \label{Nand2N}
 $E=\{n\in\mathbb{N}\mid nは偶数\}$とする．
 $E$は$\mathbb{N}$の真部分集合であることを示し，
 さらに$|\mathbb{N}|=|E|$が成り立つことを示せ．
-\end{qst}
+\end{hamadaqst}
 
 例\ref{NandZ}や問題\ref{Nand2N}からわかるように，
 $A\subsetneq B$であっても$|A|=|B|$となることがあります．
@@ -242,21 +242,21 @@ $A\subsetneq B$であっても$|A|=|B|$となることがあります．
 
 さて，ここまでは濃度の等しい集合ばかり見てきましたが，いよいよ大きさの違う無限の話題に入ります．
 
-\begin{defi}[可算・非可算]
+\begin{hamadadefi}[可算・非可算]
 $|A|=|\mathbb{N}|$を満たす集合$A$を可算無限集合と呼ぶ．
 このとき，$A$は可算である，といった言い方もする．
 一方，可算でない無限集合のことを非可算無限集合と呼ぶ．
-\end{defi}
+\end{hamadadefi}
 
 例\ref{NandZ}で見た通り，$\mathbb{Z}$は可算となります．
 実は$\mathbb{Q}$も可算であることが証明できます(考えてみてください)．
 しかし，$\mathbb{R}$は非可算です．最後にこのことを証明しましょう．
 
-\begin{lem}
+\begin{hamadalem}
 \label{real01}
 $|\mathbb{R}|=|(0,1)|$である．
 ただし$(0,1)$は$\{x\in\mathbb{R}\mid0<x<1\}$を意味する．
-\end{lem}
+\end{hamadalem}
 \begin{proof}
 写像
 $f\colon(0,1)\to\mathbb{R}$, $x\mapsto\tan\left(x-\dfrac{1}{2}\right)\pi$
@@ -264,10 +264,10 @@ $f\colon(0,1)\to\mathbb{R}$, $x\mapsto\tan\left(x-\dfrac{1}{2}\right)\pi$
 したがって$|\mathbb{R}|=|(0,1)|$である．
 \end{proof}
 
-\begin{thm}
+\begin{hamadathm}
 \label{cantor}
 $\mathbb{R}$は非可算である．
-\end{thm}
+\end{hamadathm}
 \begin{proof}
 補題\ref{real01}より，$(0,1)$が非可算であることを示せばよい．
 このことを背理法を用いて示そう．
