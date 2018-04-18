@@ -33,6 +33,7 @@ https://texwiki.texjp.org/?Make
 まずゲスプリンターで一気に刷り，その後中綴じ折り機で製本する．
 詳しくは以下を参照のこと．
 
+ゲスプリンター
 https://www.gkuc.net/?page=%A5%B2%A5%B9%A5%D7%A5%EA%A5%F3%A5%BF%A1%BC%A4%F2%BB%C8%A4%A6
-
+印刷関連機器（中綴じ折り機含む）
 https://www.gkuc.net/?page=%B0%F5%BA%FE%B4%D8%CF%A2%B5%A1%B4%EF%A4%F2%BB%C8%A4%A6
