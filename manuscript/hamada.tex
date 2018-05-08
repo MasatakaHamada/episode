@@ -324,6 +324,17 @@ $X$を集合とし，$A,B$をその部分集合とする．
 \end{enumerate}
 \end{hamadaqst}
 
+\begin{hamadaqst}
+\label{subsetequiv}
+集合$X,Y$に対し，次の3つの条件は同値であることを証明せよ．
+すなわち，次の3つの条件は互いに必要十分条件となっていることを示せ．
+\begin{enumerate}
+\item $X\subset Y$
+\item $X\cup Y=Y$
+\item $X\cap Y=X$
+\end{enumerate}
+\end{hamadaqst}
+
 \begin{hamadaqst}[ラッセルのパラドックス]
 \label{russel}
 次のような集合を考えると矛盾が生じることを示せ．
@@ -409,6 +420,27 @@ f(n)=2n\ (n=0,1,2,\cdots)
 したがって$x\in(A\cap B)^c$である．
 以上より$(A\cap B)^c=A^c\cup B^c$である．
 \end{enumerate}
+
+\Subsection{問題\ref{subsetequiv}}
+まず$1\Rightarrow2$であることを示そう．
+$Y\subset X\cup Y$は明らかだから，$X\cup Y\subset Y$であることを示せば十分である．
+そこで，$x\in X\cup Y$とすると$x\in X$または$x\in Y$である．
+$x\in X$であるとすると，仮定1より$X\subset Y$だから$x\in Y$である．
+したがって，いずれにしても$x\in Y$である．
+ゆえに$X\cup Y\subset Y$である．
+よって2が成り立つ．
+
+次に$2\Rightarrow3$であることを示そう．
+$X\cap Y\subset X$は明らかだから，$X\subset X\cap Y$であることを示せば十分である．
+そこで$x\in X$であるとすると特に$x\in X\cup Y$である．
+よって，仮定2より$X\cup Y=Y$だから$x\in Y$である．
+したがって$x\in X\cap Y$であり，ゆえに$X\subset X\cap Y$である．
+以上より3が成り立つ．
+
+最後に$3\Rightarrow1$であることを示そう．
+そこで$x\in X$であるとすると，3より$x\in X\cap Y$である．
+よって特に$x\in Y$である．
+したがって1が成り立つ．
 
 \Subsection{問題\ref{russel}}
 もし$X\in X$であるとすると，$X$の定義より$X\notin X$となり矛盾する．
