@@ -307,6 +307,59 @@ $\mathbb{Z}$，$\mathbb{Q}$よりも「大きな」無限集合であること�
 
 これで本文はおしまいです．お疲れ様でした．
 
+\section{章末問題}
+\begin{hamadaqst}[ド・モルガンの法則]
+\label{demorgan}
+$X$を集合とし，$A,B$をその部分集合とする．
+このとき
+\[ A^c=\{x\mid x\in X かつ x\notin A\} \]
+により定義される集合$A^c$を$A$の補集合と呼ぶ．
+また
+\[ A\cup B=\{x\mid x\in A または x\in B\}，A\cap B=\{x\mid x\in A かつ x\in B\} \]
+により定義される集合$A\cup B$，$A\cap B$を，それぞれ$A$と$B$の和集合，共通部分と呼ぶ．
+これらに関する次の等式を証明せよ．
+\begin{enumerate}
+\item $(A\cup B)^c=A^c\cap B^c$
+\item $(A\cap B)^c=A^c\cup B^c$
+\end{enumerate}
+\end{hamadaqst}
+
+\begin{hamadaqst}[ラッセルのパラドックス]
+\label{russel}
+次のような集合を考えると矛盾が生じることを示せ．
+\[ X=\{S\mid Sは集合でS\notin S\} \]
+\end{hamadaqst}
+
+\begin{hamadadefi}[二項関係]
+$X$を集合とする．$x,y\in X$がある条件を満たすときに$x\sim y$
+と書くとき，$\sim$を$X$の二項関係という．
+\end{hamadadefi}
+
+\begin{hamadadefi}[同値関係]
+集合$X$に対し，その二項関係$\sim$が次の3つの条件を満たすとき，
+$\sim$を$X$の同値関係と呼ぶ．
+\begin{enumerate}
+\item(反射律)任意の$x\in X$に対し$x\sim x$
+\item(対称律)任意の$x,y\in X$に対し$x\sim y$ならば$y\sim x$
+\item(推移律)任意の$x,y,z\in X$に対し$x\sim y$かつ$y\sim z$ならば$x\sim z$
+\end{enumerate}
+\end{hamadadefi}
+
+\begin{hamadaqst}
+\label{cardiseq}
+次の問いに答えよ．
+\begin{enumerate}
+\item 「集合の大きさ比べ」の節において定義した「濃度」は反射律，対称律，推移律を満たすことを示せ．
+すなわち，集合$A,B,C$に対し以下が成り立つことを示せ．
+\begin{enumerate}
+\item $|A|=|A|$
+\item $|A|=|B|$ならば$|B|=|A|$
+\item $|A|=|B|$かつ$|B|=|C|$ならば$|A|=|C|$
+\end{enumerate}
+\item 「集合の大きさ比べ」の節において，濃度が反射律，対称律，推移律を満たすことを利用している箇所を指摘せよ．
+\end{enumerate}
+\end{hamadaqst}
+
 \section{問題の解答}
 \Subsection{問題\ref{shugoq}}
 (例)
@@ -341,6 +394,51 @@ f(n)=2n\ (n=0,1,2,\cdots)
 \]
 と定めると，これは$\mathbb{N}$から$E$への1対1対応である．
 したがって$|\mathbb{N}|=|E|$である．
+
+\section{章末問題の解答}
+\Subsection{問題\ref{demorgan}}
+\begin{enumerate}
+\item $x\in(A\cup B)^c$に対し，$x\notin A\cup B$なのだから$x\notin A$かつ$x\notin B$が成り立つ．
+したがって$x\in A^c\cap B^c$である．
+また，$x\in A^c\cap B^c$に対し，$x\notin A$かつ$x\notin B$なのだから$x\notin A\cup B$が成り立つ．
+したがって$x\in(A\cup B)^c$である．
+以上より$(A\cup B)^c=A^c\cap B^c$である．
+\item $x\in(A\cap B)^c$に対し，$x\notin A\cap B$なのだから$x\notin A$または$x\notin B$が成り立つ．
+したがって$x\in A^c\cup B^c$である．
+また，$x\in A^c\cup B^c$に対し，$x\notin A$または$x\notin B$なのだから$x\notin A\cap B$が成り立つ．
+したがって$x\in(A\cap B)^c$である．
+以上より$(A\cap B)^c=A^c\cup B^c$である．
+\end{enumerate}
+
+\Subsection{問題\ref{russel}}
+もし$X\in X$であるとすると，$X$の定義より$X\notin X$となり矛盾する．
+また，$X\notin X$であるとしても，やはり$X$の定義より$X\in X$となり矛盾する．
+
+\Subsection{問題\ref{cardiseq}}
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $a\in A$を$a$自身に移す写像$\mathrm{id}\colon A\to A$を考えると
+\footnote{このような写像のことを恒等写像と呼びます．}，
+これは1対1対応である．
+したがって$|A|=|A|$である．
+\item 仮定より，1対1対応$f\colon A\to B$が存在する．
+このとき，すべての$b\in B$に対し$b=f(a)$を満たす$a\in A$がただ1つ存在するから，
+$b\in B$に対し$b=f(a)$なる$a\in A$を対応させる写像$g\colon B\to A$を考えれば
+\footnote{このような写像を逆写像と呼び，
+$f$の逆写像のことをよく$f^{-1}$と書きます．この解答では$g=f^{-1}$となっています．}，
+$g$は1対1対応である．
+したがって$|B|=|A|$である．
+\item 仮定より，1対1対応$f\colon A\to B$および$g\colon B\to C$が存在する．
+ここで，写像$h\colon A\to C$を$h(a)=g(f(a))$で定義すると
+\footnote{このような写像を合成写像と呼び，よく$g(f(a))=(g\circ f)(a)$と書きます．}，
+これは1対1対応である．
+したがって$|A|=|C|$である．
+\end{enumerate}
+\item 定理\ref{cantor}の証明の1文目で使っている．
+もし$(0,1)$が可算すなわち$|(0,1)|=|\mathbb{N}|$であるとすると，補題\ref{real01}の結果から，
+推移律を用いて$|\mathbb{R}|=|\mathbb{N}|$が得られ，$\mathbb{R}$は可算となってしまう．
+\end{enumerate}
 
 \end{document}
 
