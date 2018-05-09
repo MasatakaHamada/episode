@@ -1,4 +1,4 @@
-\documentclass[./main]{subfiles} % これを最初に書く
+﻿\documentclass[./main]{subfiles} % これを最初に書く
 
 % ここにnewtheorem,newenvironment,defなどを書く
 \theoremstyle{definition}
@@ -367,7 +367,7 @@ $\sim$を$X$の同値関係と呼ぶ．
 \item $|A|=|B|$ならば$|B|=|A|$
 \item $|A|=|B|$かつ$|B|=|C|$ならば$|A|=|C|$
 \end{enumerate}
-\item 「集合の大きさ比べ」の節において，濃度が反射律，対称律，推移律を満たすことを利用している箇所を指摘せよ．
+\item 「集合の大きさ比べ」の節において，1の事実を利用している箇所を指摘せよ．
 \end{enumerate}
 \end{hamadaqst}
 
@@ -441,6 +441,13 @@ $X\cap Y\subset X$は明らかだから，$X\subset X\cap Y$であることを�
 そこで$x\in X$であるとすると，3より$x\in X\cap Y$である．
 よって特に$x\in Y$である．
 したがって1が成り立つ．
+
+これで1，2，3が互いに必要十分条件になっていることが証明された．
+実際，例えば$1\Leftrightarrow2$は次のようにしてわかる．
+\begin{itemize}
+\item $1\Rightarrow2$は直接示してある．
+\item $2\Rightarrow1$は$2\Rightarrow3$かつ$3\Rightarrow1$であることから従う．
+\end{itemize}
 
 \Subsection{問題\ref{russel}}
 もし$X\in X$であるとすると，$X$の定義より$X\notin X$となり矛盾する．
