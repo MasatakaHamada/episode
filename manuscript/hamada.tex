@@ -371,6 +371,11 @@ $\sim$を$X$の同値関係と呼ぶ．
 \end{enumerate}
 \end{hamadaqst}
 
+\begin{hamadaqst}
+\label{cantorpractice}
+実数列全体の集合を$\mathbb{R}^\mathbb{N}$とするとき，$\mathbb{R}^\mathbb{N}$は非可算であることを証明せよ．
+\end{hamadaqst}
+
 \section{問題の解答}
 \Subsection{問題\ref{shugoq}}
 (例)
@@ -478,6 +483,24 @@ $g$は1対1対応である．
 もし$(0,1)$が可算すなわち$|(0,1)|=|\mathbb{N}|$であるとすると，補題\ref{real01}の結果から，
 推移律を用いて$|\mathbb{R}|=|\mathbb{N}|$が得られ，$\mathbb{R}$は可算となってしまう．
 \end{enumerate}
+
+\Subsection{問題\ref{cantorpractice}}
+背理法により証明する．
+$\mathbb{R}^\mathbb{N}$が可算であると仮定すると
+\[ \mathbb{R}^\mathbb{N}=\{x^{(0)},x^{(1)},x^{(2)},\cdots\} \]
+と書ける．
+ただし，各$m\in\mathbb{N}$に対し$x^{(m)}=\{x_n^{(m)}\}_{n=0}^\infty$は実数列である．
+このとき，数列$\{y_n\}_{n=0}^\infty$を次のように定める．
+\[ n=0,1,2,\cdots に対し　y_n=
+\begin{cases}
+1 & (x_n^{(n)}が負であるとき) \\
+-1 & (x_n^{(n)}が負でないとき)
+\end{cases} \]
+$\{y_n\}_{n=0}^\infty$は実数列であるから$\{y_n\}_{n=0}^\infty\in\mathbb{R}^\mathbb{N}$である．
+ところが，$\{y_n\}_{n=0}^\infty$の定義から，各$m\in\mathbb{N}$に対し$x^{(m)}\neq\{y_n\}_{n=0}^\infty$となる．
+したがって$\{y_n\}_{n=0}^\infty\notin\mathbb{R}^\mathbb{N}$であるが，これは矛盾である．
+以上より，$\mathbb{R}^\mathbb{N}$は非可算である
+\footnote{対角線論法を用いるひとつの例として出題しました．}．
 
 \end{document}
 
