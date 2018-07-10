@@ -1,42 +1,52 @@
-﻿# episodeのまとめ方
+﻿# episode原稿レポジトリ
 
-- ひとつのフォルダに次の5点を入れる
+sample.texを基に各自作成した原稿はこのレポジトリに入れてください。
+以下、その方法を説明します。
 
-1. main.tex
-2. maegaki.tex
-3. atogaki.tex
-4. kyouritu.cls
-5. 全員分の原稿TeXファイル
+---
 
-- main.texに全員の原稿を入れる
+## 準備
 
-\subfile{ファイル名}  
-のようにして全員の原稿を読み込ませる
+1. GitHubアカウントを作る
 
-- 前書き･あとがき等を編集する
+https://github.com/ にアクセスして自分のアカウントを作ってください。
 
-- main.texをコンパイルする
+2. 「コラボレーター」になる
 
-platex main  
-platex main  
-dvipdfmx main  
-等でできる．2回コンパイルしないと目次が更新されない（定理等の番号付けが2回コンパイルしないと反映されないのと同じ理屈）．ただし，いちいちこれを打つのも大変なので，Makefileを使うと良いかもしれない．詳しくは
-https://texwiki.texjp.org/?Make
+このレポジトリの編集権限をもらうために、正責任者に上で作ったアカウント名を教えてください。しばらくするとコラボレーターになるためのメールが届きます。
 
-- その他
+## 編集
 
-表紙は別ファイルpdfで良いと思われる．
+3. episodeのレポジトリにアクセスする
 
-- 印刷
+https://github.com/MasatakaHamada/episode にアクセスしてください。
 
-学生会館で印刷する予定．
-まずゲスプリンターで一気に刷り，その後中綴じ折り機で製本する．
-詳しくは以下を参照のこと．
+4. episodeのファイル一式をダウンロードする。
 
-ゲスプリンター
+上記でアクセスしたページに緑色の「Clone or download」というボタンがあります。「Download ZIP」を選択し、ファイルをダウンロードしてください。
 
-https://www.gkuc.net/?page=%A5%B2%A5%B9%A5%D7%A5%EA%A5%F3%A5%BF%A1%BC%A4%F2%BB%C8%A4%A6
+5. 自分の端末でファイルを編集する
 
-印刷関連機器（中綴じ折り機含む）
+ダウンロードしたファイルの中にある 'sample.tex' や他の人の原稿を参考にしながら、自分の端末で自分の原稿をTeXで書いてください。
 
-https://www.gkuc.net/?page=%B0%F5%BA%FE%B4%D8%CF%A2%B5%A1%B4%EF%A4%F2%BB%C8%A4%A6
+6. 自分の原稿をレポジトリに追加する
+
+https://github.com/MasatakaHamada/episode/tree/master/manuscript にアクセスして「Create new file」というボタンをクリックしてください。すると、Web上に入力画面が表示されるので、自分の端末で書いたTeX原稿をコピペしてください。また、上部にある小さな空欄にファイル名（例 'nantoka.tex' ）を入力するのを忘れないでください。
+
+入力が終わったら画面下に行き、Commit new fileに変更の概要や説明を記入します。
+>例：  
+>Create nantoka.tex  
+>nantoka.texを追加しました。
+
+新しいファイルの追加や原稿の大幅改訂などの大きな変更を行う場合は 'Create a new branch for this commit and start a pull request' を選択してください。こちらを選択した場合、変更が反映されるためには正責任者の承認が必要になります。
+
+数行程度の軽微な変更の場合は 'Commit directly to the master branch' を選択してください。
+
+7. 自分の原稿をepisodeのレポジトリ上で操作する
+
+レポジトリに追加した原稿を編集する場合は、自分の原稿をGitHub上で開き、右側にある鉛筆マーク 'Edit this file' をクリックしてください。編集方法は上で既に説明した通りです。
+
+## 何だかよくわからないぞ？
+
+上の説明を見てもよくわからない、あるいはGitHubにあまり触れたくないという方は、原稿を正責任者まで直接送ってください。
+GitHubのアカウントを作らなくてもhttps://github.com/MasatakaHamada/episode からファイルをダウンロードできます。ダウンロード方法は上記4を参照してください。
